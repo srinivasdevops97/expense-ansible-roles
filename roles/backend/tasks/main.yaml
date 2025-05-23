@@ -11,7 +11,6 @@
   loop:
   - nodejs
   - mysql
-  - mysql2
 
 - name: create expense user 
   ansible.builtin.user:
@@ -34,7 +33,7 @@
     remote_src: yes 
 
 - name: install dependencies
-  ansible.builtin.command: dnf install npm -y
+  ansible.builtin.command: npm install mysql2
   args:
     chdir: /app
 
