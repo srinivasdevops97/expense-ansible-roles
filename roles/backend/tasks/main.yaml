@@ -34,7 +34,7 @@
     remote_src: yes 
 
 - name: install dependencies #as npm is already installed
-  ansible.builtin.command: dnf install mysql2 -y
+  ansible.builtin.command: npm install mysql2
   args:
     chdir: /app
 
