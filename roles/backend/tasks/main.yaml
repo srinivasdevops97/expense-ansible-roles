@@ -34,7 +34,7 @@
 
 - name: install dependencies
   ansible.builtin.command: dnf install npm -y
-  ansbile.bultin.command: npm install mysql2
+  ansbile.builtin.command: npm install mysql2
   args:
     chdir: /app
 
