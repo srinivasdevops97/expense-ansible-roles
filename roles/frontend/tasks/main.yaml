@@ -2,12 +2,13 @@
   ansible.builtin.package:
     name: nginx
     state: present
-
-- name: start nginx server
-  ansible.builtin.service:
-    name: nginx
-    state: started
     enabled: yes
+
+# - name: start nginx server
+#   ansible.builtin.service:
+#     name: nginx
+#     state: started
+#     enabled: yes
 
 # - name: remove html directory
 #   ansible.builtin.file:
