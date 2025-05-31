@@ -34,7 +34,7 @@
   ansible.builtin.template:
     src: expense.conf.j2
     dest: /etc/nginx/default.d/expense.conf
-  notifier:
+  notify:
   - Restart nginx
 
 # - name: restart nginx
