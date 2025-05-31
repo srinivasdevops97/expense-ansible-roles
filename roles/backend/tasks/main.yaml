@@ -20,7 +20,7 @@
 - name: import tasks from common role
   ansible.builtin.import_role:
     name: common
-    tasks_from: app-pre-rep
+    tasks_from: app-pre-req
 
 - name: install dependencies #as npm is already installed
   ansible.builtin.command: npm install mysql2
