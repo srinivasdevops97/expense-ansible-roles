@@ -23,7 +23,7 @@
     tasks_from: app-pre-req
 
 - name: install dependencies #as npm is already installed
-  ansible.builtin.command: dnf npm install mysql2
+  ansible.builtin.command: dnf install mysql2
   args:
     chdir: /app
 
