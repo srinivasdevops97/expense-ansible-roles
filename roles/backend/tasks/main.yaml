@@ -20,12 +20,12 @@
 - name: import tasks from common role
   ansible.builtin.import_role:
     name: common
-    tasks_from: app-pre-req.yaml
+    tasks_from: app-pre-req
 
-- name: install mysql2 dependencies #as npm is already installed
-  ansible.builtin.command: npm install mysql2
-  args:
-    chdir: /app
+- name: Install mysql2 using Ansible's npm module
+  community.general.npm:
+    name: mysql2
+    path: /app
 
 - name: copy backend service file # copy module only works for files without variables
   ansible.builtin.template:
