@@ -4,7 +4,7 @@
 - name: enable nodejs 22
   ansible.builtin.command: dnf module enable nodejs:22 -y
 
-- name: install nodejs and mysql 
+- name: install nodejs and mysql and mpm
   ansible.builtin.package:
     name: "{{ item }}"
     state: latest
