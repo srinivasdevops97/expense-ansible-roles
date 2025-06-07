@@ -18,11 +18,15 @@
     name: expense
 
 - name: import tasks from common role
+  tags:
+  - depolyment
   ansible.builtin.import_role:
     name: common
     tasks_from: app-pre-req
 
 - name: Install mysql2 using Ansible's npm module
+  tags:
+  - depolyment
   community.general.npm:
     name: mysql2
     path: /app
@@ -49,6 +53,8 @@
     state: import
 
 - name: daemon reload
+  tags:
+  - depolyment
   ansible.builtin.systemd_service:
     daemon_reload: true
     state: restarted
