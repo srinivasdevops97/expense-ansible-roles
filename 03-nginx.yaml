@@ -1,5 +1,6 @@
 - name: nginx install and run
-  hosts: all
+  hosts: 172.31.82.223
+  #hosts: all
   become: yes #take sudo access
   serial: 2
   tasks:
